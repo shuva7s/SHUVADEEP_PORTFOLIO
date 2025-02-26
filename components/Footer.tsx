@@ -15,7 +15,7 @@ const Footer = () => {
         scale: 1.1, // Scale up 1.5x
         duration: 2, // Animation duration
         ease: "power2.inOut",
-        stagger: 0.2, // Stagger animation for a ripple effect
+        stagger: 0.4, // Stagger animation for a ripple effect
         repeat: -1, // Loop indefinitely
         yoyo: true, // Animate back to original size
       });

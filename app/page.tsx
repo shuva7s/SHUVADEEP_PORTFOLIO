@@ -5,7 +5,7 @@ import Workflow from "@/components/Workflow";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <section className="flex flex-col gap-14 items-center py-10 lg:py-20 lg:flex-row justify-center wrapper">
+      <section className="flex flex-col gap-15 items-center min-h-[85vh] lg:min-h-auto py-10 pb-15 lg:py-20 lg:flex-row justify-center wrapper">
         <div className="text_xxxl">
           <p className="text-muted-foreground">YET</p>
           <p className="text-muted-foreground">&OTHER</p>

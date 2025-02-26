@@ -20,12 +20,16 @@ const OptimizedImage = ({
   imageClassName?: string;
 }) => {
   return (
-    <div className={cn(containerClassName, "relative w-full h-full")}>
+    <div
+      draggable={false}
+      className={cn(containerClassName, "relative w-full h-full select-none")}
+    >
       <IKImage
         className={cn(
-          "w-full h-full object-center object-contain",
+          "w-full h-full object-center object-contain select-none",
           imageClassName
         )}
+        draggable={false}
         urlEndpoint={urlEndpoint}
         alt={alt}
         path={path}

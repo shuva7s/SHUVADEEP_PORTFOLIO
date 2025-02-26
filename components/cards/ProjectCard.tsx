@@ -44,10 +44,7 @@ const ProjectCard = ({
     <Card className="pt-0 overflow-hidden">
       <CardHeader className="p-0">
         <div className="w-full aspect-video relative overflow-hidden">
-          <OptimizedImage
-            path={images[0]}
-            alt={title}
-          />
+          <OptimizedImage path={images[0]} alt={title} />
           <div className="absolute w-full bottom-0 flex p-2 justify-between items-center">
             <Button
               variant="ghost"
@@ -55,7 +52,10 @@ const ProjectCard = ({
               className="rounded-full"
               asChild
             >
-              <Link href={`https://github.com/shuva7s/${repoName}`}>
+              <Link
+                href={`https://github.com/shuva7s/${repoName}`}
+                target="_blank"
+              >
                 <Image
                   src="/github.svg"
                   className="invert"
@@ -78,10 +78,7 @@ const ProjectCard = ({
                     <CarouselContent className="text-4xl font-semibold">
                       {images.map((image) => (
                         <CarouselItem key={image}>
-                          <OptimizedImage
-                            path={image}
-                            alt={title}
-                          />
+                          <OptimizedImage path={image} alt={title} />
                         </CarouselItem>
                       ))}
                     </CarouselContent>
@@ -91,7 +88,10 @@ const ProjectCard = ({
                         className="rounded-full h-12 w-12 bg-background"
                         asChild
                       >
-                        <Link href="https://github.com/shuva7s">
+                        <Link
+                          href={`https://github.com/shuva7s/${repoName}`}
+                          target="_blank"
+                        >
                           <Image
                             src="/github.svg"
                             className="invert scale-130"
@@ -118,14 +118,8 @@ const ProjectCard = ({
                 </div>
                 <div className="w-full p-5 lg:p-8 lg:w-1/2">
                   <DialogHeader>
-                    <DialogTitle>Dummy project 1</DialogTitle>
-                    <DialogDescription>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Pariatur laboriosam rem eligendi debitis provident nisi
-                      perferendis voluptate ad quisquam itaque, in, officiis,
-                      quibusdam fugiat porro? Architecto sequi neque eligendi
-                      laborum?
-                    </DialogDescription>
+                    <DialogTitle>{title}</DialogTitle>
+                    <DialogDescription>{description}</DialogDescription>
 
                     <div className="flex flex-col gap-2 mt-2">
                       <p className="text-lg font-semibold">Technologies</p>
@@ -179,7 +173,7 @@ const ProjectCard = ({
           </div>
 
           <Button className="group" asChild>
-            <Link href={link || "#"}>
+            <Link href={link || "#"} target="_blank">
               Visit{" "}
               <ArrowRight className="-rotate-45 group-hover:rotate-0 group-hover:scale-110 transition-transform" />
             </Link>

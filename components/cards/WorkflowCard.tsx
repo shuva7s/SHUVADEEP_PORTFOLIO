@@ -6,18 +6,18 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import { ProcessType } from "@/constants";
 
 const WorkflowCard = ({
   number,
   title = "Title",
   desc = "Description",
-  tempClass,
+  processes,
 }: {
   number: number;
   title?: string;
   desc?: string;
-  tempClass?: string;
+  processes: ProcessType[];
 }) => {
   return (
     <Card className="break-inside-avoid w-full relative group">
@@ -29,17 +29,13 @@ const WorkflowCard = ({
         <CardTitle>{title}</CardTitle>
         <CardDescription>{desc}</CardDescription>
       </CardHeader>
-      <CardContent className={cn(tempClass)}>
-        <ul className="list-disc px-5 text-muted-foreground marker:text-primary">
-          <li>lorem ipsum dolor</li>
-          <li>lorem ipsum dolor sit</li>
-          <li>lorem ipsum dolor sit amet</li>
-          <li>lorem ipsum</li>
+      <CardContent>
+        <ul className="list-disc px-5 text-muted-foreground marker:text-primary space-y-1.5">
+          {processes.map((process) => (
+            <li key={process.key}>{process.title}</li>
+          ))}
         </ul>
       </CardContent>
-      {/* <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter> */}
     </Card>
   );
 };

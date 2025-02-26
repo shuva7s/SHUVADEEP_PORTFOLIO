@@ -4,6 +4,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import WorkflowCard from "./cards/WorkflowCard";
+import {
+  designingProcess,
+  developmentProcess,
+  testingProcess,
+  deploymentProcess,
+  maintainanceProcess,
+} from "@/constants";
 
 gsap.registerPlugin(ScrollTrigger);
 const Workflow = () => {
@@ -39,27 +46,33 @@ const Workflow = () => {
           number={1}
           title="Design"
           desc="Everything starts with a good design."
-          tempClass="min-h-64"
+          processes={designingProcess}
         />
         <WorkflowCard
           number={2}
           title="Development"
           desc="Then the actual fun starts with coding."
-          tempClass="min-h-72"
+          processes={developmentProcess}
         />
         <WorkflowCard
           number={3}
           title="Testing"
           desc="Everything should work seamlessly and smoothly right?"
-          tempClass="min-h-36"
+          processes={testingProcess}
         />
       </div>
       <div className="columns-1 md:columns-2 gap-5 space-y-10 mt-10">
-        <WorkflowCard number={4} title="Deployment" desc="Go live!" />
+        <WorkflowCard
+          number={4}
+          title="Deployment"
+          desc="Go live!"
+          processes={deploymentProcess}
+        />
         <WorkflowCard
           number={5}
           title="Maintenance"
           desc="Keep it up to date"
+          processes={maintainanceProcess}
         />
       </div>
     </section>

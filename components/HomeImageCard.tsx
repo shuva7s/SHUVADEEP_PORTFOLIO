@@ -41,7 +41,7 @@ const HomeImageCard = () => {
   return (
     <div
       ref={cardRef}
-      className="aspect-[3.5/4] w-[44vw] md:w-[30vw] max-w-[350px] bg-background border-2 border-primary rounded-2xl opacity-0 scale-110 blur-[30px] -translate-x-[100px] -rotate-45 overflow-hidden"
+      className="aspect-[3.5/4] w-[55vw] max-w-[350px] md:w-[30vw] bg-background border-2 border-primary rounded-2xl opacity-0 scale-110 blur-[30px] -translate-x-[100px] -rotate-45 overflow-hidden"
     >
       <div ref={imageRef} className="w-full h-full overflow-hidden select-none">
         <Image

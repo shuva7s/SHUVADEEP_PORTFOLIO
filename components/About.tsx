@@ -24,7 +24,7 @@ const About = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="min-h-screen wrapper py-5">
+    <section ref={sectionRef} className="wrapper py-5">
       <p
         ref={headingRef}
         className="text_xxl text-primary font-bold opacity-0 text-center lg:text-right"
