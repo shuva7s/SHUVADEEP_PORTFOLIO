@@ -68,7 +68,7 @@ const ProjectCard = ({
             </Button>
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="secondary" size="icon">
+                <Button variant="secondary" size="icon" aria-label="Expand">
                   <Expand />
                 </Button>
               </DialogTrigger>
