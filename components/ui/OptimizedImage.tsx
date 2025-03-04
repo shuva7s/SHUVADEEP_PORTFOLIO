@@ -7,8 +7,8 @@ const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
 const OptimizedImage = ({
   path,
   alt,
-  width = 480,
-  height = 270,
+  width = 640,
+  height = 360,
   containerClassName = "",
   imageClassName,
 }: {

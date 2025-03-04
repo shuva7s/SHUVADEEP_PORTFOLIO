@@ -9,7 +9,33 @@ const projects = [
       "/evently/event",
       "/evently/account",
     ],
+    reponame: "Evently",
     link: "https://event-one-beige.vercel.app/",
+  },
+  {
+    id: "p2",
+    title: "Agile",
+    description: "Project management platform.",
+    images: [
+      "/agile/banner",
+      "/agile/home",
+      "/agile/projects",
+      "/agile/backlog",
+      "/agile/tasks",
+      "/agile/submissions",
+    ],
+    reponame: "agile-project-manager",
+    link: "https://agile-project-manager.vercel.app",
+  },
+  {
+    id: "p3",
+    title: "Social media app",
+    description: "Social media app.",
+    images: [
+      "/social/banner",
+    ],
+    reponame: "social-media",
+    link: "https://agile-project-manager.vercel.app",
   },
 ];
 

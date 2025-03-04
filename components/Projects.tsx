@@ -1,40 +1,11 @@
-"use client";
-import { useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-import {projects} from "@/constants";
+import { projects } from "@/constants";
 import ProjectCard from "./cards/ProjectCard";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Projects = () => {
-  const sectionRef = useRef(null);
-  const headingRef = useRef(null);
-
-  useGSAP(() => {
-    gsap.to(headingRef.current, {
-      opacity: 1,
-      duration: 1,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top bottom-=25%", // Fade in when 1/4 of viewport from bottom
-        end: "top top+=75%", // Fade out when 3/4 of viewport from bottom
-        toggleActions: "play none reverse none", // Play on enter, reverse on leave
-      },
-    });
-  }, []);
-
   return (
-    <section ref={sectionRef} className="min-h-screen wrapper py-5">
-      <p
-        ref={headingRef}
-        className="text_xxl text-primary font-bold opacity-0 text-center lg:text-right"
-      >
-        PROJECTS
-      </p>
-      <div className="grid gap-5 grid-cols-1 md:grid-cols-2 my-5">
+    <section className="min-h-screen max-w-[1440px] mx-auto my-5 relative">
+      <div className="absolute size-40 bg-primary rounded-full top-0 left-1/2 -translate-x-1/2 -translate-y-1/5 md:-translate-y-1/2 transition-transform blur-3xl scale-300 z-[-1]" />
+      <div className="grid gap-5 md:gap-7 grid-cols-1 md:grid-cols-2 p-5 bg-background/70 backdrop-blur-lg rounded-2xl relative z-[5]">
         {projects.map((project) => (
           <ProjectCard
             key={project.id}
@@ -42,7 +13,7 @@ const Projects = () => {
             description={project.description}
             link={project.link}
             images={project.images}
-            repoName="Event"
+            repoName={project.reponame}
           />
         ))}
       </div>

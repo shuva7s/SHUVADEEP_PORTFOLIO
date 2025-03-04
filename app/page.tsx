@@ -1,7 +1,6 @@
-import About from "@/components/About";
 import HomeImageCard from "@/components/HomeImageCard";
 import Projects from "@/components/Projects";
-import Workflow from "@/components/Workflow";
+import TestimonialSection from "@/components/TestimonialSection";
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -15,8 +14,7 @@ export default function Home() {
         <HomeImageCard />
       </section>
       <Projects />
-      <Workflow />
-      <About />
+      <TestimonialSection />
     </main>
   );
 }
