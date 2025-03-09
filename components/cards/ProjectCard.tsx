@@ -233,7 +233,7 @@ const ProjectCard = ({
   repoName: string;
 }) => {
   return (
-    <Card className="pt-0 rounded-sm overflow-hidden group bg-background border-none hover:bg-accent transition-colors">
+    <Card className="pt-0 rounded-[5px] overflow-hidden group bg-background border-none hover:bg-accent transition-colors">
       <CardHeader className="p-0">
         <Dialog>
           <DialogTrigger asChild>

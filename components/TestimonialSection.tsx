@@ -64,7 +64,7 @@ const TestimonialSection = () => {
     <section ref={sectionRef} id="review" className="wrapper py-8">
       <p
         ref={headingRef}
-        className="text-2xl md:text-3xl font-semibold text-primary text-center opacity-0"
+        className="text-3xl md:text-3xl font-semibold text-primary text-center opacity-0"
       >
         Some nice comments
       </p>
