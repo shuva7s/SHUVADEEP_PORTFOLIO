@@ -236,7 +236,7 @@ const ProjectCard = ({
     <Card className="pt-0 rounded-[5px] overflow-hidden group bg-background border-none hover:bg-accent transition-colors">
       <CardHeader className="p-0">
         <Dialog>
-          <DialogTrigger asChild>
+          <DialogTrigger>
             <div className="w-full aspect-video relative overflow-hidden">
               <OptimizedImage
                 path={images[0]}
@@ -346,6 +346,7 @@ const ProjectCard = ({
           <Button asChild size="icon" className="rounded-full" variant="default">
             <Link href={link || "#"} target="_blank">
               <ArrowRight className="scale-110" />
+              <span className="sr-only">Link</span>
             </Link>
           </Button>
         </div>

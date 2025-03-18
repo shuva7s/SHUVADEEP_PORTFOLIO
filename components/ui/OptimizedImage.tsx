@@ -6,7 +6,7 @@ const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
 
 const OptimizedImage = ({
   path,
-  alt,
+  alt = "xyz",
   width = 640,
   height = 360,
   containerClassName = "",
@@ -15,7 +15,7 @@ const OptimizedImage = ({
   path: string;
   width?: number;
   height?: number;
-  alt: string;
+  alt?: string;
   containerClassName?: string;
   imageClassName?: string;
 }) => {
