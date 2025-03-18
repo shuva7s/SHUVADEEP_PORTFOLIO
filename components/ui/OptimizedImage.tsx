@@ -6,7 +6,7 @@ const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
 
 const OptimizedImage = ({
   path,
-  alt = "xyz",
+  alt,
   width = 640,
   height = 360,
   containerClassName = "",
@@ -15,7 +15,7 @@ const OptimizedImage = ({
   path: string;
   width?: number;
   height?: number;
-  alt?: string;
+  alt: string;
   containerClassName?: string;
   imageClassName?: string;
 }) => {
@@ -31,12 +31,13 @@ const OptimizedImage = ({
         )}
         draggable={false}
         urlEndpoint={urlEndpoint}
-        alt={alt}
+        alt={alt || "Image"}
         path={path}
         loading="lazy"
         width={width}
         height={height}
         lqip={{ active: true, quality: 15, blur: 10 }}
+        aria-label="Image"
       />
     </div>
   );
