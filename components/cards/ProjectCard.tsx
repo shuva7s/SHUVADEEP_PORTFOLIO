@@ -240,10 +240,11 @@ const ProjectCard = ({
             <div className="w-full aspect-video relative overflow-hidden">
               <OptimizedImage
                 path={images[0]}
-                alt={title}
+                alt={title || "Project image"}
                 imageClassName="group-hover:scale-103 transition-transform duration-300"
               />
             </div>
+            <span className="sr-only">Trigger</span>
           </DialogTrigger>
 
           <DialogContent className="flex flex-col p-0 gap-0 lg:flex-row overflow-y-auto">
@@ -343,7 +344,12 @@ const ProjectCard = ({
             <CardTitle>{title}</CardTitle>
             <CardDescription>{description}</CardDescription>
           </div>
-          <Button asChild size="icon" className="rounded-full" variant="default">
+          <Button
+            asChild
+            size="icon"
+            className="rounded-full"
+            variant="default"
+          >
             <Link href={link || "#"} target="_blank">
               <ArrowRight className="scale-110" />
               <span className="sr-only">Link</span>
