@@ -136,7 +136,6 @@
 //   DialogTrigger,
 // };
 
-
 "use client";
 
 import * as React from "react";
@@ -154,19 +153,19 @@ function Dialog({
   React.useEffect(() => {
     const handlePopState = () => {
       if (open) {
-        onOpenChange?.(false); // Close the dialog
+        onOpenChange?.(false); // Close the dialog when back button is pressed
       }
     };
 
     if (open) {
-      window.history.pushState({ dialogOpen: true }, ""); // Push state to history
+      window.history.pushState({ dialogOpen: true }, ""); // Push a new state when opening
       window.addEventListener("popstate", handlePopState);
     }
 
     return () => {
       window.removeEventListener("popstate", handlePopState);
       if (open) {
-        window.history.back(); // Restore previous history state
+        window.history.back(); // Go back in history when dialog closes
       }
     };
   }, [open, onOpenChange]);
@@ -174,21 +173,15 @@ function Dialog({
   return <DialogPrimitive.Root open={open} onOpenChange={onOpenChange} {...props} />;
 }
 
-function DialogTrigger({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Trigger>) {
+function DialogTrigger(props: React.ComponentProps<typeof DialogPrimitive.Trigger>) {
   return <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props} />;
 }
 
-function DialogPortal({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Portal>) {
+function DialogPortal(props: React.ComponentProps<typeof DialogPrimitive.Portal>) {
   return <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />;
 }
 
-function DialogClose({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Close>) {
+function DialogClose(props: React.ComponentProps<typeof DialogPrimitive.Close>) {
   return <DialogPrimitive.Close data-slot="dialog-close" {...props} />;
 }
 
