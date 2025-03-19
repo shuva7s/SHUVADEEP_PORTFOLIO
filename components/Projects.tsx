@@ -14,6 +14,9 @@ const Projects = () => {
             link={project.link}
             images={project.images}
             repoName={project.reponame}
+            technologies= {project.techs || []}
+            points={project.points || []}
+            groupInfo={project.group}
           />
         ))}
       </div>
