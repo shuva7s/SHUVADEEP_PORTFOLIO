@@ -38,7 +38,7 @@ export const projects = [
   {
     id: "p4",
     title: "Library management system",
-    description: "Simple library management system uwing cpp.",
+    description: "Simple library management system using cpp.",
     images: ["/library/banner"],
     reponame: "Library-management-system",
     link: "https://github.com/shuva7s/Library-management-system",
