@@ -26,7 +26,7 @@ const OptimizedImage = ({
     >
       <IKImage
         className={cn(
-          "w-full h-full object-center object-contain select-none",
+          "w-full h-full object-center object-cover select-none",
           imageClassName
         )}
         draggable={false}

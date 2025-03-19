@@ -190,6 +190,7 @@ function CarouselPrevious({
       {...props}
     >
       <ArrowLeft />
+      <span className="sr-only">Left</span>
     </Button>
   );
 }
@@ -213,6 +214,7 @@ function CarouselNext({
       {...props}
     >
       <ArrowRight />
+      <span className="sr-only">Right</span>
     </Button>
   );
 }
