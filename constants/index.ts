@@ -176,6 +176,31 @@ export const projects = [
     ],
     group: [],
   },
+  {
+    id: "p5",
+    title: "Cancer detection",
+    description: "Breast cancer detection using machine learning. (Python)",
+    images: ["/cancer/banner", "/cancer/malignant", "/cancer/benign"],
+    reponame: "python_backend",
+    link: "https://breast-cancer-detection-eight.vercel.app/",
+    techs: [
+      {
+        logo: "/python.svg",
+        name: "Python",
+      },
+      {
+        logo: "/next.svg",
+        name: "Next.Js",
+      },
+    ],
+    points: [
+      "Python backend using FastAPI.",
+      "Rate limiting.",
+      "Pandas and numpy for data manipulation.",
+      "Scikit-learn for machine learning.",
+    ],
+    group: [],
+  },
 ];
 
 export type TechType = {

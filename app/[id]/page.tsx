@@ -122,6 +122,7 @@ export default async function Page({
                   alt={tech.name}
                   width={20}
                   height={20}
+                  priority
                   className="size-12 sm:size-10 rounded-xs"
                 />
                 <p className="text-lg text-muted-foreground">{tech.name}</p>
