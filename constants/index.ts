@@ -178,6 +178,29 @@ export const projects = [
   },
   {
     id: "p5",
+    title: "Dog cat classifier",
+    description: "Dog cat detection from image using neural network.",
+    images: ["/dogVScat/banner", "/dogVScat/prediction", "/dogVScat/epochs"],
+    reponame: "Dog-VS-Cat",
+    link: "https://github.com/shuva7s/Dog-VS-Cat",
+    techs: [
+      {
+        logo: "/python.svg",
+        name: "Python",
+      },
+      {
+        logo: "/tensorflow.svg",
+        name: "Tensorflow",
+      }
+    ],
+    points: [
+      "Deep neural network.",
+      "Tensolflow.",
+    ],
+    group: [],
+  },
+  {
+    id: "p6",
     title: "Cancer detection",
     description: "Breast cancer detection using machine learning. (Python)",
     images: ["/cancer/banner", "/cancer/malignant", "/cancer/benign"],
