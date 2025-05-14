@@ -5,10 +5,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "../ui/button";
-import {
-  ArrowRight,
-  Users2,
-} from "lucide-react";
+import { ArrowRight, Users2 } from "lucide-react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -57,7 +54,9 @@ const ProjectCard = ({
           <div className="flex p-5 pb-0 items-center flex-wrap gap-2">
             <div className="flex-1">
               <CardTitle>{title}</CardTitle>
-              <CardDescription>{description}</CardDescription>
+              <CardDescription className="line-clamp-1">
+                {description}
+              </CardDescription>
             </div>
             <Button size="icon" className="rounded-full" variant="default">
               <ArrowRight className="scale-110 -rotate-45 group-hover:rotate-0 transition-transform" />

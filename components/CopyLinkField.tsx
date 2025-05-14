@@ -16,9 +16,9 @@ const CopyLinkField = ({ textToCopy }: { textToCopy: string }) => {
   };
 
   return (
-    <div className="flex flex-row flex-wrap items-center gap-2 bg-card/60 backdrop-blur-2xl border border-muted-foreground/20 p-3 justify-center rounded-2xl text-sm text-foreground">
-      {textToCopy}
-      <Button onClick={handleCopy} className="relative">
+    <div className="mt-5 flex flex-row flex-wrap items-center gap-2 backdrop-blur-sm border border-muted-foreground/20 p-2 justify-center rounded-2xl text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
+      <p className="px-1.5">{textToCopy}</p>
+      <Button onClick={handleCopy} disabled={copied} className="relative" size={"sm"}>
         {copied ? "Copied!" : "Copy"}
       </Button>
     </div>

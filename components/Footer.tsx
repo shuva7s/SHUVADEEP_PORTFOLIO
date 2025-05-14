@@ -28,10 +28,9 @@ const Footer = () => {
       ref={sectionRef}
       className="wrapper relative py-10 min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] fl_center text-center flex-col gap-5"
     >
-      <div className="flex flex-col fl_center gap-5 relative z-10">
-        <p className="text_xxl text-foreground">
-          Let's make something <span className="text-primary">cool</span>
-        </p>
+      <div className="flex flex-col fl_center gap-5 relative z-10 font-bold">
+        <p className="text_xl text-muted-foreground">Let's make</p>
+        <p className="text_xxl">Something <span className="text-primary font-extrabold">cool</span></p>
         <CopyLinkField textToCopy="shuvadeepmandal5@gmail.com" />
       </div>
 

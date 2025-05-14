@@ -2,7 +2,6 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import OptimizedImage from "./ui/OptimizedImage";
 import Image from "next/image";
 
 const HomeImageCard = () => {
@@ -17,7 +16,7 @@ const HomeImageCard = () => {
       x: 0,
       rotate: 17,
       duration: 0.8,
-      delay: 0,
+      delay: 1,
     });
 
     gsap.fromTo(
@@ -32,7 +31,7 @@ const HomeImageCard = () => {
         opacity: 1,
         clipPath: "circle(100% at 50% 50%)",
         duration: 0.8,
-        delay: 0.9,
+        delay: 1.2,
         ease: "easeInOut",
       }
     );
@@ -41,7 +40,7 @@ const HomeImageCard = () => {
   return (
     <div
       ref={cardRef}
-      className="aspect-[3.5/4] w-[55vw] max-w-[350px] md:w-[30vw] bg-primary rounded-2xl opacity-0 scale-110 blur-[30px] -translate-x-[100px] -rotate-45 overflow-hidden"
+      className="aspect-[3.5/4] w-[55vw] max-w-[350px] md:w-[30vw] bg-primary/50 rounded-2xl opacity-0 scale-110 blur-[30px] -translate-x-[100px] -rotate-45 overflow-hidden"
     >
       <div ref={imageRef} className="w-full h-full overflow-hidden select-none">
         <Image

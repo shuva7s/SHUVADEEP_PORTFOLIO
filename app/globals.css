@@ -100,7 +100,10 @@
     @apply font-bold text-6xl sm:text-7xl md:text-8xl xl:text-9xl;
   }
   .text_xxl {
-    @apply font-bold text-5xl sm:text-7xl md:text-8xl;
+    @apply font-bold text-6xl sm:text-7xl md:text-8xl;
+  }
+  .text_xl {
+    @apply font-bold text-5xl sm:text-6xl md:text-7xl;
   }
   .fl_center {
     @apply flex justify-center items-center;

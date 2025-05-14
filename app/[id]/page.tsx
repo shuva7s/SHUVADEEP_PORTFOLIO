@@ -10,7 +10,7 @@ import OptimizedImage from "@/components/ui/OptimizedImage";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ExternalLink, GithubIcon, X } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 export default async function Page({
   params,
@@ -31,10 +31,12 @@ export default async function Page({
   }
   return (
     <main className="min-h-screen max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 pt-5 pb-10 flex flex-col gap-5">
-      <section className="flex flex-col sm:flex-row">
+      <section className="flex flex-col sm:flex-row py-6">
         <div className="flex-1">
           <h1 className="text-4xl font-semibold">{project.title}</h1>
-          <p className="text-xl text-muted-foreground mt-1">{project.description}</p>
+          <p className="text-xl text-muted-foreground mt-1">
+            {project.description}
+          </p>
         </div>
         <div className="hidden sm:flex mt-3 gap-5">
           <Button size="icon" variant={"secondary"} className="scale-130">
