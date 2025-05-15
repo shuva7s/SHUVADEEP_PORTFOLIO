@@ -6,8 +6,6 @@ import {
 } from "@/components/ui/card";
 import { Button } from "../ui/button";
 import { ArrowRight, Users2 } from "lucide-react";
-
-import Image from "next/image";
 import Link from "next/link";
 import OptimizedImage from "../ui/OptimizedImage";
 import { groupInfoType, TechType } from "@/constants";
@@ -34,7 +32,7 @@ const ProjectCard = ({
   groupInfo: groupInfoType[];
 }) => {
   return (
-    <Card className="pt-0 rounded-[5px] overflow-hidden group bg-background border-none hover:bg-accent transition-colors">
+    <Card className="pt-0 rounded-[5px] overflow-hidden group bg-foreground/10 backdrop-blur-sm border-none hover:bg-foreground/15 transition-colors">
       <Link href={`/${id}`}>
         <CardHeader className="p-0">
           <div className="w-full aspect-video relative overflow-hidden">
