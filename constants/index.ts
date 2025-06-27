@@ -113,7 +113,7 @@ export const projects = [
     description: "Social media app.",
     images: ["/social/banner"],
     reponame: "social-media",
-    link: "https://agile-project-manager.vercel.app",
+    link: "https://social-media-rho-nine.vercel.app/",
     techs: [
       {
         logo: "/next.svg",
