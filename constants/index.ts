@@ -1,6 +1,72 @@
 export const projects = [
   {
     id: "p1",
+    title: "Authentication",
+    description: "Fullstack authentication.",
+    images: [
+      "/Auth/banner",
+      "/Auth/homepage",
+      "/Auth/loginpage",
+      "/Auth/signuppage",
+      "/Auth/dashboard",
+    ],
+    reponame: "Auth",
+    link: "https://auth-eight-ashen.vercel.app/",
+    techs: [
+      {
+        logo: "/next.svg",
+        name: "Next.js",
+      },
+      {
+        logo: "/node.svg",
+        name: "Node.js",
+      },
+      {
+        logo: "/express.png",
+        name: "Express.js",
+      },
+      {
+        logo: "/better-auth.png",
+        name: "Better-auth",
+      },
+      {
+        logo: "/neon.png",
+        name: "Neon DB",
+      },
+      {
+        logo: "/upstash-redis.png",
+        name: "Upstash redis",
+      },
+      {
+        logo: "/ts.svg",
+        name: "Typescript",
+      },
+      {
+        logo: "/shad.png",
+        name: "Shadcn UI",
+      },
+      {
+        logo: "/tailwind.svg",
+        name: "Tailwind",
+      },
+    ],
+
+    points: [
+      "Sign up with email and password or google or github",
+      "Email verification through OTP",
+      "Sign in with Google, github and credential",
+      "Session management",
+      "Logout of all devices or logout from a perticular device",
+      "Forget password and password reset",
+      "Delete account",
+      "Rate limiting",
+      "Light and dark theme",
+    ],
+
+    group: [],
+  },
+  {
+    id: "p2",
     title: "Evently",
     description: "Event management platform.",
     images: [
@@ -55,7 +121,7 @@ export const projects = [
     group: [],
   },
   {
-    id: "p2",
+    id: "p3",
     title: "Agile",
     description: "Project management platform.",
     images: [
@@ -108,7 +174,7 @@ export const projects = [
     group: [],
   },
   {
-    id: "p3",
+    id: "p4",
     title: "Social media app",
     description: "Social media app.",
     images: ["/social/banner"],
@@ -154,7 +220,7 @@ export const projects = [
     group: [],
   },
   {
-    id: "p4",
+    id: "p5",
     title: "Library management system",
     description: "Simple library management system using cpp.",
     images: ["/library/banner"],
@@ -177,7 +243,7 @@ export const projects = [
     group: [],
   },
   {
-    id: "p5",
+    id: "p6",
     title: "Dog cat classifier",
     description: "Dog cat detection from image using neural network.",
     images: ["/dogVScat/banner", "/dogVScat/prediction", "/dogVScat/epochs"],
@@ -191,16 +257,13 @@ export const projects = [
       {
         logo: "/tensorflow.svg",
         name: "Tensorflow",
-      }
+      },
     ],
-    points: [
-      "Deep neural network.",
-      "Tensolflow.",
-    ],
+    points: ["Deep neural network.", "Tensolflow."],
     group: [],
   },
   {
-    id: "p6",
+    id: "p7",
     title: "Cancer detection",
     description: "Breast cancer detection using machine learning. (Python)",
     images: ["/cancer/banner", "/cancer/malignant", "/cancer/benign"],
